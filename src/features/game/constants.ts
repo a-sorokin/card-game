@@ -44,3 +44,22 @@ export const RANKS_ORDER = {
   [RANKS.king]: 11,
   [RANKS.ace]: 12,
 };
+
+export enum CARD_COLORS {
+  black = 'black',
+  red = 'red',
+}
+
+export const SUITS_COLORS = {
+  [SUITS.clubs]: CARD_COLORS.black,
+  [SUITS.diamonds]: CARD_COLORS.red,
+  [SUITS.hearts]: CARD_COLORS.red,
+  [SUITS.spades]: CARD_COLORS.black,
+};
+
+export enum SUITS_ICONS {
+  clubs = '♣',
+  diamonds = '♦',
+  hearts = '♥',
+  spades = '♠',
+}

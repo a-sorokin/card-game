@@ -1,8 +1,7 @@
 import styles from './Corner.module.scss';
 import { FC } from 'react';
 import clsx from 'clsx';
-import { SUITS_COLORS, SUITS_ICONS } from 'features/game/components/Card/constants';
-import { RANKS, SUITS } from 'features/game/constants';
+import { RANKS, SUITS, SUITS_COLORS, SUITS_ICONS } from 'features/game/constants';
 
 type TProps = {
   suit: SUITS;

@@ -1,2 +1,27 @@
 .middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 45px;
+}
+
+.black {
+  color: var(--black);
+}
+
+.red {
+  color: var(--red);
+}
+
+.firstIcon {
+  z-index: 2;
+}
+
+.secondIcon {
+  position: absolute;
+  scale: 1.6;
+  opacity: 0.2;
+  z-index: 1;
 }

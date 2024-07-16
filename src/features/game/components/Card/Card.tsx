@@ -13,7 +13,7 @@ export const Card: FC<TProps> = ({ suit, rank }) => {
   return (
     <section className={styles.card}>
       <Corner suit={suit} rank={rank} position="left" />
-      <Middle />
+      <Middle suit={suit} rank={rank} />
       <Corner suit={suit} rank={rank} position="right" />
     </section>
   );
