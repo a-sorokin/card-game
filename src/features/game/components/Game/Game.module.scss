@@ -1,0 +1,15 @@
+:root {
+  --black: black;
+  --red: #6c0707;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  gap: 5px;
+}

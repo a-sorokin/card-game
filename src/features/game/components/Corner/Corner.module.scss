@@ -1,0 +1,29 @@
+@mixin corner {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+  line-height: 15px;
+}
+
+.leftCorner {
+  @include corner;
+  top: 0;
+  left: 2px;
+}
+
+.rightCorner {
+  @include corner;
+  right: 2px;
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+.black {
+  color: var(--black);
+}
+
+.red {
+  color: var(--red);
+}
