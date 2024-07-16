@@ -13,6 +13,12 @@ export const Game = () => {
           ))}
         </div>
       ))}
+
+      <div className={styles.row}>
+        {Object.values(RANKS).map((rank) => (
+          <Card key={`card.closed.${rank}`} suit={SUITS.hearts} rank={rank} closed />
+        ))}
+      </div>
     </div>
   );
 };
