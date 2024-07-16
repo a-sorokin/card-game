@@ -8,10 +8,10 @@ export const RANKS_ICONS = {
     [SUITS.spades]: '👦🏿',
   },
   [RANKS.queen]: {
-    [SUITS.clubs]: '🧙🏿‍♀️',
-    [SUITS.diamonds]: '🧙‍♀️',
-    [SUITS.hearts]: '🧙‍♀️',
-    [SUITS.spades]: '🧙🏿‍♀️',
+    [SUITS.clubs]: '👩🏿',
+    [SUITS.diamonds]: '👩‍🦰',
+    [SUITS.hearts]: '👩‍🦰',
+    [SUITS.spades]: '👩🏿',
   },
   [RANKS.king]: {
     [SUITS.clubs]: '🧙🏿‍♂️',

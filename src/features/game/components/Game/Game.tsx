@@ -1,4 +1,5 @@
 import styles from './Game.module.scss';
+import 'features/game/styles.scss';
 import { Card } from 'features/game/components/Card/Card';
 import { RANKS, SUITS } from 'features/game/constants';
 
