@@ -16,6 +16,7 @@ export const createDeck = (): TDeck => {
       deck.push({
         closed: true,
         rank,
+        recentlyOpened: false,
         suit,
         weight: RANKS_WEIGHT[rank] + SUITS_WEIGHT[suit],
       });

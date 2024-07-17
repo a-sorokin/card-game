@@ -26,7 +26,7 @@ export const Player: FC<TProps> = ({ playerIndex }) => {
 
       <div className={styles.cards}>
         {openedCards.map((card, cardIndex) => (
-          <Card key={`card.${name}.${cardIndex}`} highlighted={openedCards.length === cardIndex + 1} {...card} />
+          <Card key={`card.${name}.${cardIndex}`} {...card} />
         ))}
 
         {closedCards.map((card, cardIndex) => (

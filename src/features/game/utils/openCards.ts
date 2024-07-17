@@ -2,7 +2,9 @@ import { TDeck, TPlayers } from 'features/game/types';
 
 const openCard = (deck: TDeck, cardIndex: number) => {
   const newDeck = structuredClone(deck);
+  newDeck.forEach((card) => (card.recentlyOpened = false));
   newDeck[cardIndex].closed = false;
+  newDeck[cardIndex].recentlyOpened = true;
   return newDeck;
 };
 
