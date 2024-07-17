@@ -1,6 +1,6 @@
 import { TDeck, TPlayers } from 'features/game/types';
 
-export const openCard = (deck: TDeck, cardIndex: number) => {
+const openCard = (deck: TDeck, cardIndex: number) => {
   const newDeck = structuredClone(deck);
   newDeck[cardIndex].closed = false;
   return newDeck;

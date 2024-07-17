@@ -4,13 +4,13 @@ import clsx from 'clsx';
 import { Back } from 'features/game/components/Back/Back';
 import { Corner } from 'features/game/components/Corner/Corner';
 import { Middle } from 'features/game/components/Middle/Middle';
-import { RANKS, SUITS } from 'features/game/constants/cardConstants';
+import { RANKS, SUITS, SUITS_COLORS } from 'features/game/constants/cardConstants';
 
 type TProps = {
   rank: RANKS;
   suit: SUITS;
+  closed: boolean;
 
-  closed?: boolean;
   highlighted?: boolean;
 };
 
@@ -24,7 +24,7 @@ export const Card: FC<TProps> = ({ suit, rank, closed, highlighted }) => {
   }
   return (
     <section
-      className={clsx(styles.card, {
+      className={clsx(styles.card, styles[SUITS_COLORS[suit]], {
         [styles.highlighted]: highlighted,
       })}
     >

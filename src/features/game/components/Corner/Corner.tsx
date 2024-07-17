@@ -1,7 +1,7 @@
 import styles from './Corner.module.scss';
 import { FC } from 'react';
 import clsx from 'clsx';
-import { RANKS, SUITS, SUITS_COLORS, SUITS_ICONS } from 'features/game/constants/cardConstants';
+import { RANKS, SUITS, SUITS_ICONS } from 'features/game/constants/cardConstants';
 
 type TProps = {
   suit: SUITS;
@@ -12,7 +12,7 @@ type TProps = {
 export const Corner: FC<TProps> = ({ suit, rank, position }) => {
   return (
     <div
-      className={clsx(styles[SUITS_COLORS[suit]], {
+      className={clsx({
         [styles.leftCorner]: position === 'left',
         [styles.rightCorner]: position === 'right',
       })}
