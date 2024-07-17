@@ -2,7 +2,7 @@ import styles from './Middle.module.scss';
 import { FC } from 'react';
 import clsx from 'clsx';
 import { RANKS_ICONS } from 'features/game/components/Middle/constants';
-import { RANKS, SUITS, SUITS_COLORS, SUITS_ICONS } from 'features/game/constants';
+import { RANKS, SUITS, SUITS_COLORS, SUITS_ICONS } from 'features/game/constants/cardConstants';
 
 type TProps = {
   suit: SUITS;

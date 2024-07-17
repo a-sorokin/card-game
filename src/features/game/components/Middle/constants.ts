@@ -1,4 +1,4 @@
-import { RANKS, SUITS, SUITS_ICONS } from 'features/game/constants';
+import { RANKS, SUITS, SUITS_ICONS } from 'features/game/constants/cardConstants';
 
 export const RANKS_ICONS = {
   [RANKS.jack]: {

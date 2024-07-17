@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { Back } from 'features/game/components/Back/Back';
 import { Corner } from 'features/game/components/Corner/Corner';
 import { Middle } from 'features/game/components/Middle/Middle';
-import { RANKS, SUITS } from 'features/game/constants';
+import { RANKS, SUITS } from 'features/game/constants/cardConstants';
 
 type TProps = {
   suit: SUITS;
