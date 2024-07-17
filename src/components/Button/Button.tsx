@@ -4,8 +4,8 @@ import clsx from 'clsx';
 
 type TProps = {
   onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  children: ReactElement | string | number;
 
-  children?: ReactElement | string | number;
   className?: string;
 };
 
