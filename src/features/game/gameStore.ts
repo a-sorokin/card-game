@@ -11,26 +11,26 @@ type TStore = {
   players: TPlayers;
   round: number;
 
-  startGame: () => void;
+  initGame: () => void;
   nextRound: () => void;
+  restartGame: () => void;
 };
 
-export const useGameStore = create<TStore>((set) => ({
+export const useGameStore = create<TStore>((set, get) => ({
   gameStatus: GAME_STATUS.notStarted,
   deck: [],
   players: [],
   round: 0,
 
-  startGame: () => {
+  initGame: () => {
     const deck = createDeck();
-    const playersAllClosed = dealCards(deck, AMOUNT_OF_PLAYERS);
-    const playersFirstOpened = openCards(playersAllClosed, 0);
+    const players = dealCards(deck, AMOUNT_OF_PLAYERS);
 
     set({
       deck,
-      gameStatus: GAME_STATUS.started,
-      players: playersFirstOpened,
-      round: 1,
+      gameStatus: GAME_STATUS.notStarted,
+      players,
+      round: 0,
     });
   },
 
@@ -41,8 +41,13 @@ export const useGameStore = create<TStore>((set) => ({
       return {
         players: openCards(state.players, state.round),
         round: newRound,
-        gameStatus: newRound === AMOUNT_OF_ROUNDS ? GAME_STATUS.finished : state.gameStatus,
+        gameStatus: newRound === AMOUNT_OF_ROUNDS ? GAME_STATUS.finished : GAME_STATUS.started,
       };
     });
+  },
+
+  restartGame: () => {
+    get().initGame();
+    get().nextRound();
   },
 }));

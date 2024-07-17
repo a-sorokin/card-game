@@ -5,12 +5,16 @@ import { useGameStore } from 'features/game/gameStore';
 
 export const GameControls = () => {
   const gameStatus = useGameStore((state) => state.gameStatus);
-  const startGame = useGameStore((state) => state.startGame);
   const round = useGameStore((state) => state.round);
   const nextRound = useGameStore((state) => state.nextRound);
+  const restartGame = useGameStore((state) => state.restartGame);
 
   if (gameStatus === GAME_STATUS.notStarted) {
-    return <Button onClick={startGame}>Start New Game</Button>;
+    return (
+      <div className={styles.newGame}>
+        <Button onClick={nextRound}>Start New Game</Button>
+      </div>
+    );
   }
 
   return (
@@ -19,7 +23,7 @@ export const GameControls = () => {
 
       <div className={styles.nextRound}>
         {gameStatus === GAME_STATUS.finished ? (
-          <Button onClick={startGame}>Start New Game</Button>
+          <Button onClick={restartGame}>Start New Game</Button>
         ) : (
           <Button onClick={nextRound}>Deal Next Round</Button>
         )}
