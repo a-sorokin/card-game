@@ -5,7 +5,7 @@ export enum SUITS {
   clubs = 'clubs',
 }
 
-export const SUITS_ORDER = {
+export const SUITS_WEIGHT = {
   [SUITS.spades]: 0,
   [SUITS.hearts]: 1,
   [SUITS.diamonds]: 2,
@@ -29,20 +29,20 @@ export enum RANKS {
   ten = '10',
 }
 
-export const RANKS_ORDER = {
-  [RANKS.two]: 0,
-  [RANKS.three]: 1,
-  [RANKS.four]: 2,
-  [RANKS.five]: 3,
-  [RANKS.six]: 4,
-  [RANKS.seven]: 5,
-  [RANKS.eight]: 6,
-  [RANKS.nine]: 7,
-  [RANKS.ten]: 8,
-  [RANKS.jack]: 9,
-  [RANKS.queen]: 10,
-  [RANKS.king]: 11,
-  [RANKS.ace]: 12,
+export const RANKS_WEIGHT = {
+  [RANKS.two]: 10,
+  [RANKS.three]: 20,
+  [RANKS.four]: 30,
+  [RANKS.five]: 40,
+  [RANKS.six]: 50,
+  [RANKS.seven]: 60,
+  [RANKS.eight]: 70,
+  [RANKS.nine]: 80,
+  [RANKS.ten]: 90,
+  [RANKS.jack]: 100,
+  [RANKS.queen]: 110,
+  [RANKS.king]: 120,
+  [RANKS.ace]: 130,
 };
 
 export enum CARD_COLORS {

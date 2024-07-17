@@ -1,9 +1,10 @@
 import { RANKS, SUITS } from 'features/game/constants/cardConstants';
 
 export type TCard = {
-  suit: SUITS;
-  rank: RANKS;
   closed: boolean;
+  rank: RANKS;
+  suit: SUITS;
+  weight: number;
 };
 
 export type TDeck = TCard[];

@@ -1,4 +1,4 @@
-import { RANKS, SUITS } from 'features/game/constants/cardConstants';
+import { RANKS, RANKS_WEIGHT, SUITS, SUITS_WEIGHT } from 'features/game/constants/cardConstants';
 import { TDeck } from 'features/game/types';
 
 const shuffleDeck = (deck: TDeck): TDeck => {
@@ -13,7 +13,12 @@ export const createDeck = (): TDeck => {
 
   suits.forEach((suit) => {
     ranks.forEach((rank) => {
-      deck.push({ suit, rank, closed: true });
+      deck.push({
+        closed: true,
+        rank,
+        suit,
+        weight: RANKS_WEIGHT[rank] + SUITS_WEIGHT[suit],
+      });
     });
   });
 

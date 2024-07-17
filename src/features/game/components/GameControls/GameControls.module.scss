@@ -1,0 +1,18 @@
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.round {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 25px;
+}
+
+.nextRound {
+  display: flex;
+  justify-content: left;
+  padding-left: 25px;
+}
