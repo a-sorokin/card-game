@@ -7,6 +7,7 @@ export const GameControls = () => {
   const gameStatus = useGameStore((state) => state.gameStatus);
   const startGame = useGameStore((state) => state.startGame);
   const round = useGameStore((state) => state.round);
+  const nextRound = useGameStore((state) => state.nextRound);
 
   if (gameStatus === GAME_STATUS.notStarted) {
     return <Button onClick={startGame}>Start New Game</Button>;
@@ -17,7 +18,11 @@ export const GameControls = () => {
       <span className={styles.round}>Current Round: {round}</span>
 
       <div className={styles.nextRound}>
-        <Button onClick={() => {}}>Deal Next Round</Button>
+        {gameStatus === GAME_STATUS.finished ? (
+          <Button onClick={startGame}>Start New Game</Button>
+        ) : (
+          <Button onClick={nextRound}>Deal Next Round</Button>
+        )}
       </div>
     </div>
   );
